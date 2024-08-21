@@ -1,0 +1,194 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Responsive text sizes */
+h1 {
+    margin-bottom: 20px;
+    color: #e67e22;
+    font-size: 2rem; /* Scales with screen size */
+}
+
+#cash-display {
+    font-size: 1.5rem; /* Scales with screen size */
+    margin-bottom: 20px;
+}
+
+#betting-section {
+    margin-bottom: 20px;
+}
+
+#betting-section label {
+    font-size: 1.2rem; /* Scales with screen size */
+    color: #ecf0f1;
+}
+
+#betting-section input {
+    width: 50%; /* Takes 50% of the parent container's width */
+    max-width: 150px; /* Maximum width for larger screens */
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#betting-section button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #e67e22;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#betting-section button:hover {
+    background-color: #d35400;
+}
+
+#game-status {
+    font-size: 1.5rem; /* Scales with screen size */
+    margin-bottom: 20px;
+    color: #ecf0f1;
+}
+
+#game-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 1fr allows the grid to be flexible */
+    gap: 5px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 300px; /* Max width for larger screens */
+}
+
+.cell {
+    width: 100%; /* Fill available space in the grid */
+    padding-top: 100%; /* Maintain square aspect ratio */
+    position: relative;
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #ecf0f1;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+.mine {
+    background-color: #e74c3c;
+}
+
+.safe {
+    background-color: #27ae60;
+}
+
+#reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e67e22;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset-button:hover {
+    background-color: #d35400;
+}
+
+#statistics {
+    margin-top: 20px;
+    font-size: 1.2rem; /* Scales with screen size */
+}
+
+#statistics p {
+    margin: 5px 0;
+}
+
+#leaderboard {
+    margin-top: 30px;
+    font-size: 1.2rem; /* Scales with screen size */
+}
+
+#leaderboard h2 {
+    margin-bottom: 10px;
+    color: #e67e22;
+    font-size: 1.8rem; /* Scales with screen size */
+}
+
+#leaderboard-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#leaderboard-list li {
+    margin: 5px 0;
+    background-color: #34495e;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+#load-more {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #e67e22;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#load-more:hover {
+    background-color: #d35400;
+}
+
+/* Media Queries for smaller devices */
+@media (max-width: 768px) {
+    #game-container {
+        grid-template-columns: repeat(5, 1fr); /* Adjust the grid for smaller screens */
+        max-width: 100%; /* Make the grid take up the full width of the container */
+    }
+
+    #betting-section button, #reset-button, #load-more {
+        width: 100%; /* Full width buttons on smaller screens */
+        margin-top: 10px; /* Add some spacing on top */
+    }
+
+    .cell {
+        font-size: 1.2rem; /* Smaller font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Smaller headings on very small screens */
+    }
+
+    #cash-display, #game-status, #leaderboard h2 {
+        font-size: 1rem; /* Smaller text on very small screens */
+    }
+
+    #betting-section label {
+        font-size: 1rem;
+    }
+
+    .cell {
+        font-size: 1rem; /* Adjusted cell font size */
+    }
+}

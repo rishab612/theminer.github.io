@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mine Game</h1>
+    <div id="cash-display">
+        <p>Cash: ₹<span id="cash-amount">1000</span></p>
+    </div>
+    <div id="betting-section">
+        <label for="bet-amount">Bet Amount:</label>
+        <input type="number" id="bet-amount" min="1" max="100" value="10">
+        <button id="place-bet">Place Bet</button>
+        <button id="cash-out">Cash Out</button>
+        <button id="addMoneyButton">Add Money</button>
+        <button id="payButton">Pay ₹1000 and Reveal Mines</button>
+
+
+    </div>
+    <div id="game-status"></div>
+    <div id="game-container"></div>
+    <button id="reset-button" disabled>Reset Game</button>
+    <div id="statistics">
+        <p id="games-played">Games Played: 0</p>
+        <p id="games-won">Games Won: 0</p>
+        <p id="games-lost">Games Lost: 0</p>
+        <p id="game-timer">Time: 00:00</p>
+    </div>
+    <div id="leaderboard">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard-list">
+            <button id="load-more">Load More</button>
+            <!-- Leaderboard entries will be added here -->
+        </ul>
+    </div>
+
+    <audio id="mine-sound" src="sounds/mine.mp3"></audio>
+    <audio id="win-sound" src="sounds/win.mp3"></audio>
+    <audio id="lose-sound" src="sounds/lose.mp3"></audio>
+
+
+    <script src="script.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</body>
+</html>
